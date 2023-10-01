@@ -8,9 +8,11 @@
 
     <link href="/dist/output.css" rel="stylesheet" />
   </head>
-  <body class="flex items-center justify-center bg-neutral-magnolia">
+  <body
+    class="flex items-start justify-center bg-neutral-magnolia md:items-center"
+  >
     <div
-      class="h-full w-full rounded-xl bg-neutral-alabaster shadow-main md:flex md:h-5/6 md:w-[95%] md:max-w-7xl md:p-4"
+      class="h-full w-full rounded-xl md:flex md:h-5/6 md:w-[95%] md:max-w-7xl md:bg-neutral-alabaster md:p-4 md:shadow-main"
     >
       <!-- Step 1 Your info Step 2 Select plan Step 3 Add-ons Step 4 Summary -->
       <aside
@@ -19,42 +21,90 @@
         <ul
           class="flex w-full items-center justify-center gap-5 pt-9 md:flex-col"
         >
-          <li class="step">
-            <span class="step__circle step__circle--active"> 1 </span>
-            <article class="step__texts">
-              <h2 class="step__title">Step 1</h2>
-              <h3 class="step__subtitle">Your info</h3>
+          <li class="item">
+            <span class="item__circle item__circle--active"> 1 </span>
+            <article class="item__texts">
+              <h2 class="item__title">Step 1</h2>
+              <h3 class="item__subtitle">Your info</h3>
             </article>
           </li>
-          <li class="step">
-            <span class="step__circle"> 2 </span>
-            <article class="step__texts">
-              <h2 class="step__title">Step 2</h2>
-              <h3 class="step__subtitle">select plan</h3>
+          <li class="item">
+            <span class="item__circle"> 2 </span>
+            <article class="item__texts">
+              <h2 class="item__title">Step 2</h2>
+              <h3 class="item__subtitle">select plan</h3>
             </article>
           </li>
-          <li class="step">
-            <span class="step__circle"> 3 </span>
-            <article class="step__texts">
-              <h2 class="step__title">Step 3</h2>
-              <h3 class="step__subtitle">add-ons</h3>
+          <li class="item">
+            <span class="item__circle"> 3 </span>
+            <article class="item__texts">
+              <h2 class="item__title">Step 3</h2>
+              <h3 class="item__subtitle">add-ons</h3>
             </article>
           </li>
-          <li class="step">
-            <span class="step__circle"> 4 </span>
-            <article class="step__texts">
-              <h2 class="step__title">Step 4</h2>
-              <h3 class="step__subtitle">summary</h3>
+          <li class="item">
+            <span class="item__circle"> 4 </span>
+            <article class="item__texts">
+              <h2 class="item__title">Step 4</h2>
+              <h3 class="item__subtitle">summary</h3>
             </article>
           </li>
         </ul>
       </aside>
       <!-- Sidebar end -->
-    </div>
 
-    <!-- Personal info Please provide your name, email address, and phone number.
-    Name e.g. Stephen King Email Address e.g. stephenking@lorem.com Phone Number
-    e.g. +1 234 567 890 Next Step -->
+      <main
+        class="mx-auto -mt-16 w-11/12 max-w-3xl rounded-xl bg-neutral-alabaster px-6 py-8 shadow-main md:relative md:mt-0 md:shadow-none"
+      >
+        <!-- Step 1 start -->
+        <section id="step-1" class="step">
+          <article>
+            <h1 class="step__title">Personal info</h1>
+            <p class="step__description">
+              Please provide your name, email address, and phone number.
+            </p>
+          </article>
+
+          <form class="mt-6 grid gap-4">
+            <label class="textfield">
+              <p class="textfield__label">Name</p>
+              <input
+                type="text"
+                class="textfield__input"
+                placeholder="e.g Stephen King"
+              />
+            </label>
+            <label class="textfield">
+              <p class="textfield__label">Email Address</p>
+              <input
+                type="text"
+                class="textfield__input"
+                placeholder="e.g. stephenking@lorem.com"
+              />
+            </label>
+            <label class="textfield">
+              <p class="textfield__label">Phone Number</p>
+              <input
+                type="text"
+                class="textfield__input"
+                placeholder="e.g. +1 234 567 890 Next Step"
+              />
+            </label>
+          </form>
+        </section>
+        <!-- Step 1 end -->
+
+        <footer
+          class="shadow-secondary absolute bottom-0 left-0 w-full max-w-3xl bg-neutral-alabaster p-4 md:shadow-none"
+        >
+          <button
+            class="ml-auto flex rounded-md border-none bg-primary-marine-blue px-4 py-3 text-base font-bold text-neutral-alabaster hover:brightness-[.80] hover:transition-all md:px-6"
+          >
+            Next Step
+          </button>
+        </footer>
+      </main>
+    </div>
 
     <!-- Step 2 start -->
 

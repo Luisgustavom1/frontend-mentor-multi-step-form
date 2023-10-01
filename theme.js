@@ -24,6 +24,7 @@ module.exports = {
   },
   boxShadow: {
     main: "rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px",
+    secondary: "rgba(0, 0, 0, 0.1) 0px 3px 12px",
   },
   backgroundImage: {
     "aside-mobile": "url('/src/assets/images/bg-sidebar-mobile.svg')",

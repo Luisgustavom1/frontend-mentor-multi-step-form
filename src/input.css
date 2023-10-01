@@ -23,27 +23,47 @@
 }
 
 @layer components {
-  .step {
-    @apply flex w-fit gap-4 uppercase text-neutral-alabaster md:w-9/12;
+  .item {
+    @apply flex w-fit gap-3 uppercase text-neutral-alabaster md:w-9/12;
 
-    .step__texts {
+    .item__texts {
       @apply hidden md:block;
 
-      .step__title {
+      .item__title {
         @apply text-sm font-light text-primary-pastel-blue;
       }
 
-      .step__subtitle {
+      .item__subtitle {
         @apply text-base font-bold;
       }
     }
 
-    .step__circle {
+    .item__circle {
       @apply flex h-10 w-10 items-center justify-center rounded-full border-[1px] border-current text-base font-bold;
     }
 
-    .step__circle--active {
+    .item__circle--active {
       @apply border-primary-pastel-blue bg-primary-pastel-blue text-primary-marine-blue;
+    }
+  }
+
+  .step {
+    .step__title {
+      @apply text-2xl font-bold text-primary-marine-blue;
+    }
+
+    .step__description {
+      @apply mt-3 text-neutral-cool-gray;
+    }
+  }
+
+  .textfield {
+    .textfield__label {
+      @apply text-sm text-primary-marine-blue;
+    }
+
+    .textfield__input {
+      @apply mt-1 w-full rounded-md border-[1px] border-neutral-light-gray bg-transparent px-4 py-3 text-neutral-cool-gray placeholder:font-bold placeholder:text-current;
     }
   }
 }
