@@ -18,18 +18,33 @@
   @font-face {
     font-family: Ubuntu;
     src: url(/src/assets/fonts/Ubuntu-Regular.ttf);
-    font-weight: regular;
+    font-weight: lighter;
   }
 }
 
-
 @layer components {
-  .step-circle {
-    @apply border-[1px] border-neutral-magnolia text-neutral-magborder-neutral-magnolia text-base font-bold w-10 h-10 flex items-center justify-center rounded-full;
-  }
+  .step {
+    @apply flex w-fit gap-4 uppercase text-neutral-alabaster md:w-9/12;
 
-  .step-circle.active {
-    @apply bg-primary-pastel-blue text-primary-marine-blue;
+    .step__texts {
+      @apply hidden md:block;
+
+      .step__title {
+        @apply text-sm font-light text-primary-pastel-blue;
+      }
+
+      .step__subtitle {
+        @apply text-base font-bold;
+      }
+    }
+
+    .step__circle {
+      @apply flex h-10 w-10 items-center justify-center rounded-full border-[1px] border-current text-base font-bold;
+    }
+
+    .step__circle--active {
+      @apply border-primary-pastel-blue bg-primary-pastel-blue text-primary-marine-blue;
+    }
   }
 }
 
@@ -43,11 +58,19 @@ html {
   font-family: Ubuntu;
 }
 
-img, svg {
+html,
+body {
+  height: 100%;
+}
+
+img,
+svg {
   user-select: none;
 }
 
-ul, li, ol {
+ul,
+li,
+ol {
   text-decoration: none;
   list-style: none;
 }
