@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Ubuntu;
+    src: url(/src/assets/fonts/Ubuntu-Bold.ttf);
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: Ubuntu;
+    src: url(/src/assets/fonts/Ubuntu-Medium.ttf);
+    font-weight: medium;
+  }
+
+  @font-face {
+    font-family: Ubuntu;
+    src: url(/src/assets/fonts/Ubuntu-Regular.ttf);
+    font-weight: regular;
+  }
+}
+
+
+@layer components {
+  .step-circle {
+    @apply border-[1px] border-neutral-magnolia text-neutral-magborder-neutral-magnolia text-base font-bold w-10 h-10 flex items-center justify-center rounded-full;
+  }
+
+  .step-circle.active {
+    @apply bg-primary-pastel-blue text-primary-marine-blue;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Ubuntu;
+}
+
+img, svg {
+  user-select: none;
+}
+
+ul, li, ol {
+  text-decoration: none;
+  list-style: none;
+}
